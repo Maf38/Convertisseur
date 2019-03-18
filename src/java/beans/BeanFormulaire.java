@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  Ce Bean a été superbement modifié depuis gitHub
+ essai de pull...puul it up selecta! :)
  */
 package beans;
 
