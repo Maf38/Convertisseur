@@ -7,7 +7,6 @@
 <%@page import="metier.Convertisseur"%>
 <%@page import="java.util.Map"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib tagdir="/WEB-INF/tags" prefix="tag" %> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -57,6 +56,5 @@
         <br/>
  
         <a href="page-conversion.jsp">Retour</a>
-        <tag:footerTag message="Merci d'avoir converti des  ${valider.depart} en ${valider.arrivee}"  />
     </body>
 </html>
