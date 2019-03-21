@@ -4,6 +4,8 @@
     Author     : mafal
 --%>
 
+<%@page import="ejb.ControleurRemote"%>
+<%@page import="beans.beanRelais"%>
 <%@page import="metier.Convertisseur"%>
 <%@page import="java.util.Map"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -25,7 +27,11 @@
                String devArrivee;
                int montant;
                Map HashListeDevise;
-               HashListeDevise= Convertisseur.getConversionTable();               
+               
+                beanRelais unBean = new beanRelais("ejb/mafal/controleur");
+                //récupération du proxy
+                ControleurRemote stub = (ControleurRemote) unBean.getProxy() ;
+               HashListeDevise=  stub.getConversionTable();             
                
                devDepart=request.getParameter("depart").toString();
                devArrivee=request.getParameter("arrivee").toString();
